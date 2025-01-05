@@ -26,6 +26,8 @@ androidx-ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit
 androidx-material3 = { group = "androidx.compose.material3", name = "material3" }
 # Icons
 icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version = "1.7.6" }
+# Jsoup
+jsoup = { group = "org.jsoup", name = "jsoup", version = "1.18.3" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

@@ -44,6 +44,9 @@ dependencies {
     // Icons
     implementation(libs.icons.extended)
 
+    // Jsoup
+    implementation(libs.jsoup)
+
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
     implementation(libs.androidx.activity.compose)
