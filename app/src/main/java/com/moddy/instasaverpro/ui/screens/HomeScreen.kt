@@ -1,11 +1,13 @@
 package com.moddy.instasaverpro.ui.screens
 
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowDropDown
+import androidx.compose.material.icons.filled.Download
 import androidx.compose.material3.Button
 import androidx.compose.material3.Card
 import androidx.compose.material3.CenterAlignedTopAppBar
@@ -41,24 +43,31 @@ private fun Home(modifier: Modifier = Modifier) {
         modifier = modifier.fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
-        Card {
-            OutlinedTextField(
-                value = "",
-                onValueChange = {},
-                placeholder = { Text(text = "Instagram Post") },
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .padding(horizontal = 16.dp, vertical = 12.dp)
-            )
-        }
-        Button(
-            onClick = {},
-            modifier = Modifier
-                .fillMaxWidth()
-                .padding(horizontal = 16.dp, vertical = 12.dp)
+        Card(
+            modifier = Modifier.padding(16.dp)
         ) {
-            Icon(imageVector = Icons.Default.ArrowDropDown, contentDescription = null)
-            Text(text = "Find Post")
+            Column(
+                modifier = Modifier.padding(16.dp)
+            ) {
+                OutlinedTextField(
+                    value = "",
+                    onValueChange = {},
+                    label = { Text("Url Post") },
+                    placeholder = { Text(text = "Instagram Post") },
+                    modifier = Modifier
+                        .fillMaxWidth()
+                )
+                Spacer(Modifier.padding(4.dp))
+                Button(
+                    onClick = {},
+                    modifier = Modifier
+                        .fillMaxWidth()
+                ) {
+                    Icon(imageVector = Icons.Default.Download, contentDescription = null)
+                    Spacer(modifier = Modifier.padding(4.dp))
+                    Text(text = "Find Post")
+                }
+            }
         }
     }
 }
